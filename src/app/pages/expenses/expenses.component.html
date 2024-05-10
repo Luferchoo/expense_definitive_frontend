@@ -1,0 +1,30 @@
+<div id="content-expenses">
+    <section>
+        <form (submit)="onSubmit()">
+            <h1>Register</h1>
+            <input type="text" placeholder="name" [(ngModel)]="expense.name" name="name">
+            <input type="text" placeholder="description" [(ngModel)]="expense.description" name="description">
+            <input type="number" placeholder="amount" [(ngModel)]="expense.amount" name="amount">
+            <input type="date" [(ngModel)]="expense.timestamp" name="timestamp">
+            <button type="submit">{{ editingIndex !== null ? 'Update' : 'Send' }}</button>
+            <button type="button" (click)="resetForm()">Cancel</button>
+        </form>
+    </section>
+    <section>
+        <h2>Expenses</h2>
+        <article *ngFor="let expense of expenses; let i = index" >
+            <div class="expense-card">
+                <div>
+                    <h3>{{expense.name}}</h3>
+                    <p> {{expense.description}}</p>
+                    <p> {{expense.amount}}</p>
+                    <p> {{expense.timestamp}}</p>
+                </div>
+                <div class="buttons">
+                    <button (click)="edit(i)">Update</button>
+                    <button (click)="delete(i)">Delete</button>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>

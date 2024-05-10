@@ -1,0 +1,26 @@
+<div id="content-categories">
+    <section>
+        <form (submit)="onSubmit()">
+            <h1>Register</h1>
+            <input type="text" placeholder="name" [(ngModel)]="category.name" name="name">
+            <input type="text" placeholder="description" [(ngModel)]="category.description" name="description">
+            <button type="submit">{{ editingIndex !== null ? 'Update' : 'Send' }}</button>
+            <button type="button" (click)="resetForm()">Cancel</button>
+        </form>
+    </section>
+    <section>
+        <h2>Categorie</h2>
+        <article *ngFor="let category of categories; let i = index" >
+            <div class="category-card">
+                <div>
+                    <h3>{{category.name}}</h3>
+                    <p> {{category.description}}</p>
+                </div>
+                <div class="buttons">
+                    <button (click)="edit(i)">Update</button>
+                    <button (click)="delete(i)">Delete</button>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>

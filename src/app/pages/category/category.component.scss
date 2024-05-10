@@ -1,0 +1,58 @@
+#content-categories{
+    background-color: orange;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+}
+
+section{
+    height: 65vh;
+    width: 45%;
+    background-color: white;
+    padding: 2.5rem 5rem;
+}
+
+.category-card{
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons{
+    display: flex;
+}
+
+button{
+    margin: .5rem;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+form{
+    background-color: white;
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+
+h1{
+    font-size: 3rem;
+}
